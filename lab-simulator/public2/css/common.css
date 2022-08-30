@@ -1,0 +1,152 @@
+/* 초기화 선언  */
+html { font-family: "Arial", "Times New Roman", "sans-serif";}  /* 기본 폰트를 다음과 같이 지정한다. */
+
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, 
+input,figure { margin: 0; padding: 0; }     /* 기본 레이아웃 크기는 0으로 지정해서 공백 없애기 */ 
+
+body { 
+    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling : 터치 단말기에서 주어진 요소의 스크롤 활성화 여부를 결정하는 함수.
+        touch 속성 : 모멘텀 기반 스크롤 - 스크롤 제스처가 끝나고 터치 화면에서 떼어도 잠시 스크롤이 지속됨 */
+
+    text-align : left;   /* 인라인 콘테츠를 줄 상자의 왼쪽 모서리로 정렬한다. */
+    max-height: 100%;   /* 요소의 최대 높이를 100%로 지정한다. */
+}
+
+a, a:hover {                   /* a태그, a태그의 마우스 클릭 속성 전체 */
+    text-decoration: none;     /* 하이퍼링크 밑줄 생성 없애는 코드 */ 
+    outline: none;             /* border 바깥 외곽선을 없애는 코드 */
+}
+
+li { list-style: none }        /* li 태그의 숫자와 기호를 없애는 코드 */
+
+img {                    /*img 태그 속성 전체 */
+    border: none;        /* img 테두리 없음*/
+    max-width:100%;      /*최대 너비 100% */
+}
+
+input, select, textarea { 
+    border: none; 
+    outline: none; 
+    background: none 
+}
+
+em,i {       /* em 태그 : 강조할 텍스트 태그, i태그는 이탤릭체  */
+    font-style: normal  /* 브라우저에 일반 글꼴 스타일이 표시되는 속성 */
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal }
+
+body{
+    width: 100%;
+    height: 100vh;     /* vh : 뷰포트 너비값 - px 높이값의 100분의 1 크기*/ 
+    position: relative;
+    background: rgb(6,19,49); /* 웹페이지 전체 컬러 (뒷배경 색상) */ 
+}
+
+/* header */
+.header {
+    height: 80px;       /* header의 높이는 80px */
+    font-size: 26px;
+    line-height: 80px;  /* header의 top 높이 조정  */ 
+    color: #ccc;
+    padding-left: 30px;
+    border-bottom: 1px solid #eee;   /* header 테두리 중 아래 쪽 선만 표출 */
+}
+
+/* content */
+.content {
+    padding-left: 120px;     /* padding-left CSS 속성은 요소의 왼쪽에 안쪽 여백 영역을 설정 */
+                             /* html 페이지 전체 중 왼쪽 영역 120px에 content 바가 위치하게 됨 */
+}
+
+/* content left */
+.left {
+    position: absolute;
+    top: 81px;
+    left: 0;      /* content 바가 왼쪽으로 완전히 붙게 설정 */ 
+    width: 120px;  
+    z-index: 1;    /* 위치 지정 요소로, z축 순서를 지정한다. 숫자가 클수록 큰 숫자의 인덱스가 위에 쌓인다.  */ 
+}
+
+.left dl {
+    padding-top: 10px;     /* .left dl 태그의 padding 상단을 10px로 지정   */ 
+}
+
+.left dd {
+    width: 120px;       /* .left dd 태그의 너비는 120px로 지정 */
+    text-align: center;    /* dd 태그의 인라인 콘텐츠를 줄 상자 가운데로 정렬 (텍스트 가운데 정렬) */
+    line-height: 50px;     /* 줄 간격을 50px로 지정 */
+    font-size: 16px;       /* 폰트 크기 16px로 지정 */
+    color: #ccc;
+    cursor: pointer;       /* 마우스 커서 모양을 포인터로 지정 (손모양 아이콘) */ 
+}
+
+.left dd a {
+    display: block;    /* 요소들을 block 요소처럼 표시한다. a 태그가 줄바꿈 형식으로 표출 */
+    color: #ccc;    /* .left dd 태그의 a 태그 텍스트 색상 */ 
+}
+
+.left dd a:hover, .left dd.on a {   /* 마우스 커서를 올렸을 때 텍스트 색상이 변경됨 */
+    color: #20A0FF; 
+}
+
+/*   위에 코드만 있어도 실행 가능, 이 코드는 삭제해도 괜찮을 듯 
+.left dd:hover, .left dd.on {
+    color: #20A0FF;
+}
+*/ 
+
+/* content right */
+.right{
+    padding-left: 15px;
+    padding-top: 15px;
+    border-left: 1px #eee solid;
+    overflow: hidden;
+}
+/* right样式 */
+.right{
+    padding-left: 15px;
+    padding-top: 15px;
+    border-left: 1px #eee solid;
+    overflow: hidden;
+}
+/* 搜索样式 */
+.form{
+   
+}
+.form .mt40{
+    float: left;
+    margin-right: 15px;
+}
+.form .input{
+    margin-right: 15px;
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.form .button{
+    border-radius: 4px;
+    width: 90px;
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+}
+/* table样式 */
+table{
+    border-top: 1px solid #EBEEF5;
+    border-left: 1px solid #EBEEF5;
+}
+th{
+    border-right: 1px solid #EBEEF5;
+}
+td{
+    border-right: 1px solid #EBEEF5;
+    border-bottom: 1px solid #EBEEF5;
+}

@@ -1,0 +1,5 @@
+module.exports = {
+  user: process.env.NODE_ORACLEDB_USER || "C##LEE",
+  password: process.env.NODE_ORACLEDB_PASSWORD || "vs7954",
+  connectString: process.env.NODE_ORACLEDB_CONNECTIONSTRING || "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.1.22)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))",
+};

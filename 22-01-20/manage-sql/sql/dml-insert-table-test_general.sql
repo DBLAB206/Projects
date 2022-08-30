@@ -1,0 +1,1 @@
+INSERT INTO test_general VALUES (test_general_seq.NEXTVAL, 1, 1, 1, 2, 2, 2, 3, 3, 3, SYSDATE);
